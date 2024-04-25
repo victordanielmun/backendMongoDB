@@ -10,7 +10,7 @@ import { createAccesToken } from "../libs/jwt.js";
  * @return {Object} JSON response with the success status and user details if successful, error message if not.
  */
 export const register = async (req, res) => {
-  const { userName, password, email } = req.body;
+  const { userName, password, email, type } = req.body;
 
   try {
     const passwordHash = await bcrypt.hash(password, 10);
@@ -18,6 +18,7 @@ export const register = async (req, res) => {
     const newUser = new User({
       userName,
       email,
+      type,
       password: passwordHash,
     });
 
