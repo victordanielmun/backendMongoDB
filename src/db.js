@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-import { URI } from "./config";
+
+const URI = process.env.MONGO_URI || "mongodb+srv://victordanielmun:89rCEclh9JEqboNK@cluster0.rwyrfvn.mongodb.net/"
 
 /**
  * Asynchronously connects to the MongoDB database using mongoose.
