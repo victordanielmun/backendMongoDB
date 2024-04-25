@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
+import cors from "cors"
 
 import authRoutes from "./routes/auth.route.js";
 import contentRoutes from "./routes/content.route.js";
